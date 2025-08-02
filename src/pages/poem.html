@@ -7,9 +7,9 @@
     <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png"
         type="image/png">
     <title>Poem | Inked Mind</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .poem-page {
@@ -286,9 +286,15 @@
                     <li><a href="./poems.html" class="active">Poems</a></li>
                     <li><a href="./contests.html">Contests</a></li>
                     <li><a href="./pricing.html">Pricing</a></li>
-                    <li class="auth-links">
+                                        <li class="auth-links">
                         <a href="./login.html" class="btn-login">Log In</a>
                         <a href="./signup.html" class="btn-primary">Sign Up</a>
+                    </li>
+                    <li class="theme-switcher">
+                        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </button>
                     </li>
                 </ul>
             </nav>
@@ -505,7 +511,7 @@ Ready to begin again.
         </div>
     </footer>
 
-    <script src="../js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Get poem ID from URL query params
@@ -595,6 +601,7 @@ Ready to begin again.
             }
         });
     </script>
+    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>

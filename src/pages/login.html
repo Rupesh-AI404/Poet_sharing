@@ -7,9 +7,9 @@
     <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png"
         type="image/png">
     <title>Login | Inked Mind</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .login-page {
@@ -25,7 +25,7 @@
             max-width: 500px;
             width: 100%;
             padding: 40px;
-            background-color: white;
+            background-color: var(--light-color);
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
         }
@@ -78,12 +78,12 @@
         .login-options span {
             flex: 1;
             height: 1px;
-            background-color: #ddd;
+            background-color: var(--secondary-color);
         }
 
         .login-options p {
             margin: 0 15px;
-            color: #666;
+            color: var(--text-color);
         }
 
         .social-login {
@@ -99,15 +99,15 @@
             gap: 10px;
             padding: 12px;
             border-radius: var(--border-radius);
-            border: 1px solid #ddd;
-            background-color: white;
+            border: 1px solid var(--secondary-color);
+            background-color: var(--light-color);
             font-weight: 600;
             cursor: pointer;
             transition: var(--transition);
         }
 
         .social-login-btn:hover {
-            background-color: #f5f5f5;
+            background-color: var(--secondary-color);
         }
 
         .social-login-btn i {
@@ -141,9 +141,15 @@
                     <li><a href="./poems.html">Poems</a></li>
                     <li><a href="./contests.html">Contests</a></li>
                     <li><a href="./pricing.html">Pricing</a></li>
-                    <li class="auth-links">
+                                        <li class="auth-links">
                         <a href="./login.html" class="btn-login active">Log In</a>
                         <a href="./signup.html" class="btn-primary">Sign Up</a>
+                    </li>
+                    <li class="theme-switcher">
+                        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </button>
                     </li>
                 </ul>
             </nav>
@@ -258,7 +264,7 @@
         </div>
     </footer>
 
-    <script src="../js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const loginForm = document.getElementById('loginForm');

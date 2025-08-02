@@ -7,9 +7,9 @@
     <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png"
         type="image/png">
     <title>Payment | Inked Mind</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .payment-page {
@@ -39,7 +39,7 @@
         }
         
         .order-summary {
-            background-color: white;
+            background-color: var(--light-color);
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
             padding: 30px;
@@ -48,7 +48,7 @@
         .order-summary h2 {
             margin-bottom: 25px;
             padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid var(--secondary-color);
         }
         
         .order-details {
@@ -64,7 +64,7 @@
         .order-item.total {
             padding-top: 15px;
             margin-top: 15px;
-            border-top: 1px solid #eee;
+            border-top: 1px solid var(--secondary-color);
             font-size: 1.2rem;
             font-weight: 600;
         }
@@ -98,7 +98,7 @@
         }
         
         .payment-methods {
-            background-color: white;
+            background-color: var(--light-color);
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
             padding: 30px;
@@ -107,7 +107,7 @@
         .payment-methods h2 {
             margin-bottom: 25px;
             padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid var(--secondary-color);
         }
         
         .payment-tabs {
@@ -119,7 +119,7 @@
             flex: 1;
             text-align: center;
             padding: 15px;
-            border: 1px solid #eee;
+            border: 1px solid var(--secondary-color);
             cursor: pointer;
             font-weight: 600;
             transition: var(--transition);
@@ -167,13 +167,13 @@
         .form-group select {
             width: 100%;
             padding: 12px;
-            border: 1px solid #ddd;
+            border: 1px solid var(--secondary-color);
             border-radius: var(--border-radius);
         }
         
         .form-group .hint {
             font-size: 0.85rem;
-            color: #666;
+            color: var(--text-color);
             margin-top: 5px;
         }
         
@@ -206,7 +206,7 @@
             justify-content: center;
             gap: 10px;
             margin-top: 20px;
-            color: #666;
+            color: var(--text-color);
             font-size: 0.9rem;
         }
         
@@ -221,7 +221,7 @@
         }
         
         .local-payment-option {
-            border: 1px solid #ddd;
+            border: 1px solid var(--secondary-color);
             border-radius: var(--border-radius);
             padding: 20px;
             width: 120px;
@@ -247,7 +247,7 @@
             display: none;
             text-align: center;
             padding: 40px 20px;
-            background-color: white;
+            background-color: var(--light-color);
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
         }
@@ -265,7 +265,7 @@
         
         .payment-success p {
             margin-bottom: 25px;
-            color: #666;
+            color: var(--text-color);
         }
         
         @media (max-width: 768px) {
@@ -298,9 +298,15 @@
                     <li><a href="./poems.html">Poems</a></li>
                     <li><a href="./contests.html">Contests</a></li>
                     <li><a href="./pricing.html" class="active">Pricing</a></li>
-                    <li class="auth-links">
+                                        <li class="auth-links">
                         <a href="./login.html" class="btn-login">Log In</a>
                         <a href="./signup.html" class="btn-primary">Sign Up</a>
+                    </li>
+                    <li class="theme-switcher">
+                        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </button>
                     </li>
                 </ul>
             </nav>
@@ -500,7 +506,7 @@
         </div>
     </footer>
 
-    <script src="../js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Check if user is logged in

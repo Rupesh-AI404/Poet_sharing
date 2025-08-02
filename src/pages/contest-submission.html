@@ -7,9 +7,9 @@
     <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png"
         type="image/png">
     <title>Contest Submission | Inked Mind</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .submission-page {
@@ -22,7 +22,7 @@
         }
         
         .contest-details {
-            background-color: white;
+            background-color: var(--light-color);
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
             padding: 30px;
@@ -81,7 +81,7 @@
         }
         
         .submission-form {
-            background-color: white;
+            background-color: var(--light-color);
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
             padding: 30px;
@@ -102,7 +102,7 @@
         
         .character-count {
             text-align: right;
-            color: #666;
+            color: var(--text-color);
             font-size: 0.9rem;
             margin-top: 5px;
         }
@@ -141,12 +141,12 @@
         }
         
         .premium-alert {
-            background-color: #fff3cd;
-            color: #856404;
+            background-color: var(--premium-alert-bg, #fff3cd);
+            color: var(--premium-alert-text, #856404);
             padding: 15px;
             border-radius: var(--border-radius);
             margin-bottom: 20px;
-            border-left: 4px solid #ffeeba;
+            border-left: 4px solid var(--premium-alert-border, #ffeeba);
             display: flex;
             align-items: center;
             gap: 15px;
@@ -193,6 +193,12 @@
                     <li class="auth-links">
                         <a href="./login.html" class="btn-login">Log In</a>
                         <a href="./signup.html" class="btn-primary">Sign Up</a>
+                    </li>
+                    <li class="theme-switcher">
+                        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </button>
                     </li>
                 </ul>
             </nav>
@@ -270,6 +276,7 @@
         </section>
     </main>
 
+    <script src="../assets/js/main.js"></script>
     <footer id="site-footer">
         <div class="container">
             <div class="footer-content">
@@ -328,7 +335,7 @@
         </div>
     </footer>
 
-    <script src="../js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Check if user is logged in

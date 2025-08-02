@@ -1,7 +1,7 @@
 /* Footer Styles */
 #site-footer {
-    background-color: var(--dark-color);
-    color: var(--light-color);
+    background-color: var(--footer-bg);
+    color: var(--footer-color);
     padding: 60px 0 20px;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .footer-logo p {
-    color: #aaa;
+    color: var(--footer-text-color);
 }
 
 .footer-links {
@@ -48,12 +48,12 @@
 }
 
 .footer-section ul li a {
-    color: #aaa;
+    color: var(--footer-text-color);
     transition: var(--transition);
 }
 
 .footer-section ul li a:hover {
-    color: var(--light-color);
+    color: var(--footer-color);
     margin-left: 5px;
 }
 
@@ -74,13 +74,13 @@
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--footer-subtle-bg-or-border);
     border-radius: 50%;
     transition: var(--transition);
 }
 
 .social-icons a i {
-    color: var(--light-color);
+    color: var(--footer-color);
     font-size: 1.2rem;
 }
 
@@ -104,6 +104,8 @@
     padding: 10px;
     border: none;
     border-radius: var(--border-radius);
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--dark-color);
 }
 
 .newsletter-form button {
@@ -113,11 +115,11 @@
 .footer-bottom {
     text-align: center;
     padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--footer-subtle-bg-or-border);
 }
 
 .footer-bottom p {
-    color: #aaa;
+    color: var(--footer-text-color);
 }
 
 /* Responsive Footer */

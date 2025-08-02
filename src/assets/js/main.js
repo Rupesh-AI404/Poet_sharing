@@ -1,18 +1,50 @@
-// Main JavaScript File
+document.addEventListener('DOMContentLoaded', () => {
+    // Theme switcher
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
 
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('Document ready - Inked Mind Poetry Platform');
-    
-    // Mobile Navigation Toggle
+    // Apply saved theme on page load
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme && savedTheme === 'dark-mode') {
+        body.classList.add('dark-mode');
+    }
+
+    // Toggle theme on button click
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark-mode');
+            } else {
+                localStorage.setItem('theme', 'light-mode');
+            }
+        });
+    }
+
+    // Mobile navigation toggle
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
-    
+
     if (navToggle) {
-        navToggle.addEventListener('click', function() {
+        navToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
     }
-    
+
+    // Scrolled header effect
+    const header = document.getElementById('site-header');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    }
+
+    console.log('Document ready - Inked Mind Poetry Platform');
+
     // Close mobile nav when clicking outside
     document.addEventListener('click', function(event) {
         if (navLinks && navLinks.classList.contains('active')) {
@@ -21,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
-    
+
     // Newsletter Form Submission
     const newsletterForm = document.querySelector('.newsletter-form');
     if (newsletterForm) {
@@ -34,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
     
     // Check for user login status
     updateUserInterface();

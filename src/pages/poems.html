@@ -7,9 +7,9 @@
     <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png"
         type="image/png">
     <title>Poems | Inked Mind</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .poems-header {
@@ -29,7 +29,7 @@
         }
         
         .poems-filters {
-            background-color: white;
+            background-color: var(--light-color);
             padding: 20px;
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
@@ -63,7 +63,7 @@
         .filter-group select,
         .filter-group input {
             padding: 10px;
-            border: 1px solid #ddd;
+            border: 1px solid var(--secondary-color);
             border-radius: var(--border-radius);
         }
         
@@ -74,7 +74,7 @@
         }
         
         .poem-card {
-            background-color: white;
+            background-color: var(--light-color);
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
             padding: 25px;
@@ -121,7 +121,7 @@
         
         .author-info .date {
             font-size: 0.9rem;
-            color: #666;
+            color: var(--text-color);
         }
         
         .poem-excerpt {
@@ -133,7 +133,7 @@
         .poem-meta {
             display: flex;
             justify-content: space-between;
-            color: #666;
+            color: var(--text-color);
             font-size: 0.9rem;
         }
         
@@ -189,7 +189,7 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background-color: white;
+            background-color: var(--light-color);
             box-shadow: var(--box-shadow);
             font-weight: 600;
             color: var(--text-color);
@@ -249,9 +249,15 @@
                     <li><a href="./poems.html" class="active">Poems</a></li>
                     <li><a href="./contests.html">Contests</a></li>
                     <li><a href="./pricing.html">Pricing</a></li>
-                    <li class="auth-links">
+                                        <li class="auth-links">
                         <a href="./login.html" class="btn-login">Log In</a>
                         <a href="./signup.html" class="btn-primary">Sign Up</a>
+                    </li>
+                    <li class="theme-switcher">
+                        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </button>
                     </li>
                 </ul>
             </nav>
@@ -515,6 +521,7 @@
         </section>
     </main>
 
+    <script src="../assets/js/main.js"></script>
     <footer id="site-footer">
         <div class="container">
             <div class="footer-content">
@@ -573,7 +580,7 @@
         </div>
     </footer>
 
-    <script src="../js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Filter toggle on mobile
@@ -618,6 +625,19 @@
                         alert('Searching for: ' + searchInput.value);
                         // In a real app, we would search for poems here
                     }
+                });
+            }
+        });
+    </script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterToggle = document.querySelector('.filter-toggle');
+            const filterOptions = document.querySelector('.filter-options');
+
+            if (filterToggle) {
+                filterToggle.addEventListener('click', function() {
+                    filterOptions.classList.toggle('active');
                 });
             }
         });

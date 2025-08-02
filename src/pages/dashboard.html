@@ -7,11 +7,11 @@
     <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png"
         type="image/png">
     <title>Dashboard | Inked Mind</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
 </head>
 
 <body>
@@ -31,9 +31,15 @@
                     <li><a href="./poems.html">Poems</a></li>
                     <li><a href="./contests.html">Contests</a></li>
                     <li><a href="./pricing.html">Pricing</a></li>
-                    <li class="auth-links">
+                                        <li class="auth-links">
                         <a href="./dashboard.html" class="btn-login active">Dashboard</a>
                         <a href="#" id="logout-btn" class="btn-primary">Log Out</a>
+                    </li>
+                    <li class="theme-switcher">
+                        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </button>
                     </li>
                 </ul>
             </nav>
@@ -244,8 +250,8 @@
         </div>
     </footer>
 
-    <script src="../js/main.js"></script>
-    <script src="../js/dashboard.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
 </body>
 
 </html>

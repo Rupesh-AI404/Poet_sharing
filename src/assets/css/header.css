@@ -1,10 +1,17 @@
 /* Header Styles */
 #site-header {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#site-header.scrolled {
     background-color: var(--light-color);
     box-shadow: var(--box-shadow);
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
 #site-header .container {
@@ -20,12 +27,17 @@
 }
 
 .logo a {
-    color: var(--dark-color);
+    color: var(--text-color);
+}
+
+#main-nav {
+    flex-grow: 1;
 }
 
 #main-nav .nav-links {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 #main-nav .nav-links li {
@@ -57,10 +69,36 @@
     display: flex;
     align-items: center;
     gap: 15px;
+    margin-left: auto;
 }
 
 .btn-login {
     font-weight: 600;
+}
+
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle-btn .fa-sun {
+    display: none;
+}
+
+body.dark-mode .theme-toggle-btn .fa-sun {
+    display: inline-block;
+}
+
+body.dark-mode .theme-toggle-btn .fa-moon {
+    display: none;
 }
 
 .nav-toggle {
@@ -79,7 +117,7 @@
         right: 0;
         flex-direction: column;
         background-color: var(--light-color);
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: var(--box-shadow);
         padding: 20px;
     }
     

@@ -1,7 +1,6 @@
-/* Main Styles */
 :root {
-    --primary-color: #6246ea;
-    --secondary-color: #d1d1e9;
+    --primary-color: #8B4513; /* Dark Brown */
+    --secondary-color: #F2E9D5; /* Creamy Beige */
     --dark-color: #2b2c34;
     --light-color: #fffffe;
     --background-color: #f9f9f9;
@@ -10,6 +9,51 @@
     --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
     --border-radius: 8px;
+    --footer-bg: #1a202c;
+    --footer-color: #ffffff;
+    --footer-text-color: #555;
+    --footer-subtle-bg-or-border: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode {
+    --primary-color: #8B4513; /* Dark Brown */
+    --secondary-color: #2c2c34;
+    --dark-color: #fffffe;
+    --light-color: #16161a;
+    --background-color: #16161a;
+    --text-color: #94a1b2;
+    --heading-color: #fffffe;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    --footer-text-color: #aaa;
+    --footer-subtle-bg-or-border: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: var(--heading-color);
+}
+
+body.dark-mode .btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+body.dark-mode .hero-content p,
+body.dark-mode .poem-meta,
+body.dark-mode .testimonial-author .role {
+    color: var(--text-color);
+}
+
+body.dark-mode .slider-dot {
+    background-color: var(--secondary-color);
+}
+
+body.dark-mode .slider-dot.active {
+    background-color: var(--primary-color);
 }
 
 * {
@@ -23,6 +67,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
+    padding-top: 80px; /* Account for fixed header */
 }
 
 a {
@@ -75,7 +120,7 @@ h1, h2, h3, h4 {
 }
 
 .btn-primary:hover {
-    background-color: #5339d2;
+    background-color: #7A3D11; /* Darker Brown on hover */
     transform: translateY(-2px);
 }
 
@@ -135,7 +180,7 @@ h1, h2, h3, h4 {
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 30px;
-    color: #666;
+    color: var(--text-color);
 }
 
 .hero-cta {
@@ -223,7 +268,7 @@ h1, h2, h3, h4 {
 .poem-meta {
     display: flex;
     justify-content: space-between;
-    color: #666;
+    color: var(--text-color);
     font-size: 0.9rem;
 }
 
@@ -329,7 +374,7 @@ h1, h2, h3, h4 {
 }
 
 .testimonial-author .role {
-    color: #666;
+    color: var(--text-color);
 }
 
 .slider-controls {
@@ -389,24 +434,34 @@ h1, h2, h3, h4 {
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
+    color: var(--text-color);
 }
 
-.form-group input,
-.form-group textarea,
-.form-group select {
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+textarea,
+select {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--secondary-color);
+    background-color: var(--light-color);
+    color: var(--text-color);
     border-radius: var(--border-radius);
-    font-family: inherit;
     font-size: 1rem;
+    transition: var(--transition);
 }
 
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:focus {
     outline: none;
     border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(127, 90, 240, 0.3);
 }
 
 .form-group .error {
