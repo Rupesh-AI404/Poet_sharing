@@ -1,6 +1,6 @@
 /* Header Styles */
 #site-header {
-    background-color: transparent;
+    background-color: var(--light-color);
     position: fixed;
     top: 0;
     left: 0;
@@ -18,7 +18,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 25px 20px;
 }
 
 .logo h1 {
