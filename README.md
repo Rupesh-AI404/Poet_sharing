@@ -43,26 +43,7 @@ Inked-Mind/
 - **Dashboard**: User dashboard for managing content
 - **Responsive Design**: Mobile-friendly interface
 
-## Getting Started
 
-This is a **simple static website** that runs directly in any web browser - no installation required!
-
-### Option 1: Open directly in browser
-1. Navigate to the `src` folder
-2. Double-click `index.html` to open in your browser
-
-### Option 2: Use a local server (recommended for development)
-If you have Python installed:
-```bash
-cd src
-python -m http.server 8000
-```
-Then open `http://localhost:8000` in your browser
-
-### Option 3: Use VS Code Live Server extension
-1. Install the "Live Server" extension in VS Code
-2. Right-click on `src/index.html`
-3. Select "Open with Live Server"
 
 ## Technologies Used
 
@@ -79,13 +60,3 @@ Then open `http://localhost:8000` in your browser
 - **`src/assets/js/`** - All JavaScript files
 - **`src/assets/images/`** - All images
 
-## Contributing
-
-1. Fork the repository
-2. Make your changes
-3. Test by opening the HTML files in a browser
-4. Submit a pull request
-
-## License
-
-This project is open source and available under the [ISC License](LICENSE).
